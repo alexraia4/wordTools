@@ -1,0 +1,10 @@
+.GameBoard {
+  height: 70vh;
+  width: 70vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  margin-bottom: 4vh;
+}

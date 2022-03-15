@@ -1,7 +1,8 @@
 import '../styles/reset.css'
 import '../styles/App.css';
 import { useState } from 'react'
-import Row from './Row';
+import GameBoard from './GameBoard'
+import Submission from './Submission'
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
 
   return (
     <div className="App">
-      {word.map(char => <Row />)}
+      <GameBoard />
+      <Submission />
     </div>
   );
 }

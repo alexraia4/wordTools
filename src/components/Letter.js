@@ -1,10 +1,10 @@
 import '../styles/Letter.css'
 
-function Letter() {
-
+function Letter({letter}) {
+  console.log('Letter: ', letter)
   return (
     <div className="Letter">
-      Letter
+      {letter}
     </div>
   );
 }

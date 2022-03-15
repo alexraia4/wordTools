@@ -1,0 +1,11 @@
+.Letter {
+  width: 5vw;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-width: 2px;
+  padding: 1vw;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

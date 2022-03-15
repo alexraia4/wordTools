@@ -1,15 +1,10 @@
 import '../styles/Row.css'
 import Letter from './Letter'
 
-function Row() {
-
+function Row({wordArr}) {
   return (
     <div className="Row">
-      <Letter />
-      <Letter />
-      <Letter />
-      <Letter />
-      <Letter />
+      {wordArr.map(letter => <Letter letter={letter}/>)}
     </div>
   );
 }
