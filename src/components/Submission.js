@@ -7,11 +7,12 @@ function Submission({guesses, setGuesses, step, setStep}) {
   const handleSubmit = () => {
     
     let newGuesses = guesses
+    newGuesses[0] = 'qwert'
     console.log('GUESSES: ', guesses)
     console.log('NEWGUESSES: ', newGuesses)
     
     //guesses[step] = guess
-    // setGuesses(guesses)
+    setGuesses(newGuesses)
     // setStep(step++)
     // console.log('SUB GUESSES: ', guesses)
   }

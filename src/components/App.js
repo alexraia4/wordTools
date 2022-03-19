@@ -2,20 +2,27 @@ import '../styles/reset.css'
 import '../styles/App.css';
 import { useState, useEffect } from 'react'
 import GameBoard from './GameBoard'
-import Submission from './Submission'
 
 function App() {
 
   const [word, setWord] = useState('train'.split(''))
   const [guesses, setGuesses] = useState(['*****', '*****', '*****', '*****', '*****', '*****'])
   const [step, setStep] = useState(0)
+  const [currentGuess, setCurrentGuess] = useState('')
 
-  console.log('APP GUESSES: ', guesses)
+  console.log(step)
+
+  const handleSubmit = () => {
+    setStep(step + 1)
+  }
 
   return (
     <div className="App">
       <GameBoard guesses={guesses}/>
-      <Submission guesses={guesses} setGuesses={setGuesses} step={step} setStep={setStep}/>
+        <div>
+        <input type="text" onChange={(e) => setCurrentGuess(e.target.value)}/>
+        <div className='Submission_submit' onClick={handleSubmit}>Submit</div>
+      </div>
     </div>
   );
 }
