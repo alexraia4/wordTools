@@ -1,16 +1,10 @@
 import '../styles/GameBoard.css'
 import Row from './Row'
 
-function GameBoard() {
-
+function GameBoard({guesses}) {
   return (
     <div className="GameBoard">
-      <Row wordArr={'train'.split('')}/>
-      <Row wordArr={'*****'.split('')}/>
-      <Row wordArr={'*****'.split('')}/>
-      <Row wordArr={'*****'.split('')}/>
-      <Row wordArr={'*****'.split('')}/>
-      <Row wordArr={'*****'.split('')}/>
+      {guesses.map(guess => <Row wordArr={guess.split('')}/>)}
     </div>
   );
 }
