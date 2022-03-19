@@ -5,7 +5,7 @@ import GameBoard from './GameBoard'
 
 function App() {
 
-  const [word, setWord] = useState('train'.split(''))
+  const [word, setWord] = useState('train')
   const [guesses] = useState(['*****', '*****', '*****', '*****', '*****', '*****'])
   const [step, setStep] = useState(0)
   const [currentGuess, setCurrentGuess] = useState('')
@@ -19,9 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <GameBoard guesses={guesses}/>
+      <GameBoard guesses={guesses} word={word}/>
         <div>
-        <input type="text" maxlength="5" onChange={(e) => setCurrentGuess(e.target.value)}/>
+        <input type="text" maxLength="5" onChange={(e) => setCurrentGuess(e.target.value)}/>
         <div className='Submission_submit' onClick={handleSubmit}>Submit</div>
       </div>
     </div>

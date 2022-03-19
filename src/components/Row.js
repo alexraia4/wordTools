@@ -1,10 +1,10 @@
 import '../styles/Row.css'
 import Letter from './Letter'
 
-function Row({wordArr}) {
+function Row({guessArr, wordArr}) {
   return (
     <div className="Row">
-      {wordArr.map(letter => <Letter letter={letter}/>)}
+      {guessArr.map((letter, index) => <Letter letter={letter} wordArr={wordArr} key={index} />)}
     </div>
   );
 }

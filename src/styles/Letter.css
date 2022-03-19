@@ -1,8 +1,6 @@
 .Letter {
   width: 5vw;
-  border-style: solid;
-  border-color: rgb(0, 0, 0);
-  border-width: 2px;
+  color: rgb(255, 255, 255);
   padding: 1vw;
   font-size: 3vw;
   display: flex;
