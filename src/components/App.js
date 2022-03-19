@@ -1,6 +1,6 @@
 import '../styles/reset.css'
 import '../styles/App.css';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import GameBoard from './GameBoard'
 
 function App() {
@@ -9,8 +9,6 @@ function App() {
   const [guesses] = useState(['*****', '*****', '*****', '*****', '*****', '*****'])
   const [step, setStep] = useState(0)
   const [currentGuess, setCurrentGuess] = useState('')
-
-  console.log(step)
 
   const handleSubmit = () => {
     guesses[step] = currentGuess

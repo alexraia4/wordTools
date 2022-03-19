@@ -1,8 +1,9 @@
 import '../styles/Letter.css'
 
-function Letter({letter}) {
+function Letter({letter, wordArr, index}) {
+
   let color = {
-    backgroundColor: true ? 'gray' : 'green'
+    backgroundColor: wordArr[index] === letter ? 'green' : wordArr.includes(letter) ? 'orange' : 'rgb(75, 73, 73)'
   }
   
   return (
