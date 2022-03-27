@@ -1,4 +1,4 @@
-exports.dictionary = [
+const dictionary = [
   "aa",
   "aah",
   "aahed",
@@ -172820,3 +172820,5 @@ exports.dictionary = [
   "zyzzyva",
   "zyzzyvas"
 ]
+
+export default dictionary
