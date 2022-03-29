@@ -1,15 +1,29 @@
 import '../styles/reset.css'
 import '../styles/App.css';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import GameBoard from './GameBoard'
+import axios from 'axios'
 
 function App() {
 
-  const [word, setWord] = useState('penis'.toUpperCase())
+  const [word, setWord] = useState('')
   const [guesses] = useState(['*****', '*****', '*****', '*****', '*****', '*****'])
   const [step, setStep] = useState(0)
   const [currentGuess, setCurrentGuess] = useState('')
+//'penis'.toUpperCase()
+  
 
+  const requestNewWord = () => {
+    axios.get('http://localhost:3777/validWordle').then(payload => setWord(payload.data.toUpperCase()))
+  }
+
+ 
+
+
+  useEffect(() => requestNewWord(), [])
+
+
+  console.log(word)
   const handleSubmit = () => {
     guesses[step] = currentGuess.toUpperCase()
     setStep(step + 1)

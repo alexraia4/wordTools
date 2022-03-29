@@ -1,4 +1,4 @@
-const dictionary = [
+module.exports = { dictionary : [
   "aa",
   "aah",
   "aahed",
@@ -172819,6 +172819,4 @@ const dictionary = [
   "zymurgy",
   "zyzzyva",
   "zyzzyvas"
-]
-
-export default dictionary
+]}
